@@ -31,3 +31,11 @@ import './index.css';
 console.log(
   '👋 This message is being logged by "renderer.js", included via webpack',
 );
+
+const inputElement = document.getElementById('input1') as HTMLInputElement;
+const buttonElement = document.getElementById('button1') as HTMLButtonElement;
+
+buttonElement.addEventListener('click', () => {
+  console.log(`Hello, ${inputElement.value}!`);
+  alert(`Hello, ${inputElement.value}!`);
+});
